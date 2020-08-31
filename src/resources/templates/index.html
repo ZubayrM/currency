@@ -3,18 +3,18 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript" src="skript.js"></script>
+	<script type="text/javascript" src="../static/script.js"></script>
 	<title></title>
 </head>
 <body>
 	<form method="post">
-			<table class="my_table" border="5">
+			<table class="my_table" border="16">
 		<tr>
 			<td colspan="2">
 				<select size="1">
-					<option value="dol">&#36; (dol)</option>
-					<option value="eur">&#8364; (eur)</option>
-					<option value="rub">&#8381; (rub)</option>
+					<option name="val" value="dol">&#36; (dol)</option>
+					<option name="val" value="eur">&#8364; (eur)</option>
+					<option name="val" value="rub">&#8381; (rub)</option>
 				</select>
 			</td>
 			<td colspan="2" class="r">
@@ -31,12 +31,18 @@
 		</tr>
 		<tr>
 			<td colspan="3">
-				<input type="text" name="" class="my_text" oninput ="dollar()">
+				<input type="text" name="" class="my_text" value="" oninput ="dollar()">
 			</td>
 			<td colspan ="3">
 				<input type="text" name="" class="my_text" disabled>
 			</td>
 		</tr>
+				<tr>
+					<td colspan="3"></td>
+					<td colspan="3" class="my_text">
+						<input type="text" name="" class="my_text" disabled>
+					</td>
+				</tr>
 	</table>
 	</form>
 
