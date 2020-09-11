@@ -1,8 +1,8 @@
 .my_table{
 	margin: 0;
 	padding: 0;
-	border-color: #A52A2A;
-	background-color: #A52A2A;
+	border-color: #48424C;
+	background-color: #868186;
 }
 
 .my_table td{
@@ -10,13 +10,15 @@
 	height: 40px;
 }
 
-.my_text{
-	width: 95%;
-	height: 95%;
-	text-align: right;
-	font-size: 30px;
-	color: #800000;
+.my_text {
+	  width: 95%;
+	  height: 95%;
+	  text-align: right;
+	  font-size: 30px;
+	  color: #424D7A
 }
+
+
 
 td{
 	text-align: center;
@@ -27,7 +29,7 @@ select {
 	height: 100%;
 	font-size: 25px;
 	align-content: center;
-	color: #A52A2A;
+	color: #5A565D;
 
 }
 b {
@@ -40,5 +42,5 @@ b {
 }
 
 input.text:focus{
-	background: red;
+	color: aqua;
 }

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript" src="../static/script.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 	<title></title>
 </head>
 <body>
@@ -11,38 +11,32 @@
 			<table class="my_table" border="16">
 		<tr>
 			<td colspan="2">
-				<select size="1">
-					<option name="val" value="dol">&#36; (dol)</option>
-					<option name="val" value="eur">&#8364; (eur)</option>
-					<option name="val" value="rub">&#8381; (rub)</option>
+				<select size="1" id="select_one" onchange="consider()">
+					<option id="dol" name="dol" th:value="${dol}" >&#36; (dol)</option>
+					<option id="eur" name="eur" th:value="${eur}" >&#8364; (eur)</option>
+					<option id="rub" name="rub" th:value="${rub}" >&#8381; (rub)</option>
 				</select>
 			</td>
 			<td colspan="2" class="r">
-				<b>=</b>
+				<b>&#8594;</b>
 			</td>
 			
 			<td colspan="2">
-				<select size="1">
-					<option value="dol">&#36; (dol)</option>
-					<option value="eur">&#8364; (eur)</option>
-					<option value="rub">&#8381; (rub)</option>
+				<select size="1" id="select_two" onchange="consider()">
+					<option name="dol" value="dol">&#36; (dol)</option>
+					<option name="eur" value="eur">&#8364; (eur)</option>
+					<option name="rub" value="rub">&#8381; (rub)</option>
 				</select>
 			</td>
 		</tr>
 		<tr>
 			<td colspan="3">
-				<input type="text" name="" class="my_text" value="" oninput ="dollar()">
+				<input type="text" id="value" name="" class="my_text" value="" oninput ="consider()">
 			</td>
 			<td colspan ="3">
-				<input type="text" name="" class="my_text" disabled>
+				<input type="text" id="result" name="" value="0" class="my_text" disabled >
 			</td>
 		</tr>
-				<tr>
-					<td colspan="3"></td>
-					<td colspan="3" class="my_text">
-						<input type="text" name="" class="my_text" disabled>
-					</td>
-				</tr>
 	</table>
 	</form>
 
